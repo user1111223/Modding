@@ -1,1 +1,10 @@
+-- Create a new folder called "AI" in your mod file
+local AI = {}
 
+-- Define your NPC's behaviors in separate Lua files within the "AI" folder
+AI.Idle = require(script.Parent.AI.Idle)
+AI.Wander = require(script.Parent.AI.Wander)
+AI.Attack = require(script.Parent.AI.Attack)
+
+-- Return the AI table for use in other scripts
+return AI
